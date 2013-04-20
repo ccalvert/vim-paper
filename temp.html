@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+
+This is an HTML version of a great [VIM movements cheatsheet][] designed by Ted Naleid.
+
+I made this because I wanted more control over the way the text was displayed, and I'd rather tweak CSS than mess with Omnigraffle. If you just want Ted's graphic overlaid on your desktop, you should download the [transparent version] of the VIM movements cheatsheet.
+
+I use it with [NerdTool][]. Sadly, NerdTool can't overlay transparent HTML. So I supply a background-image URL. You'll want to change that to something on your local filesystem. Here is a [screenshot][] of the results. The background image is taken from the always great [Bibliodyssey][], resized to the size of my screen.
+
+[VIM movements cheatsheet]: http://naleid.com/blog/2010/10/04/vim-movement-shortcuts-wallpaper/
+[transparent version]: http://bitbucket.org/tednaleid/vim-shortcut-wallpaper/raw/tip/vim-shortcuts2560x1600_transparent.png
+[NerdTool]: http://mutablecode.com/apps/nerdtool
+[screenshot]: http://minus.com/mjZtlZUmR
+[Bibliodyssey]: http://bibliodyssey.blogspot.com/2011/08/neapolitan-cephalopods.html
+
+Modifications September 2012 by Charles Calvert:
+  o Updated to match the sortcuts listed on the source image, which has been revised.
+  o Switched absolute movements block from an absolutely positioned div to part of the
+    main table.  Eliminated the CSS rules that were no longer needed.
+  o Changed "forward" to be rotated 90 degreees instead of -90 degrees.
+  o Removed an extraneous closing body tag.
+
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">
+	  html {
+      /*height:100%;*/
+      height: 900px;
+      width: 1440px;
+      color: black;
+      text-shadow:0 1px 0 rgba(255,255,255,0.75);
+	  }
+	  body {
+		  /*background-image: url("file://localhost/Users/david/Pictures/Wallpapers/6085502292_8f6ec91a3b_o_screen.jpg");*/
+		  background-position: center;
+      background-repeat: no-repeat;
+      font-size: 11pt;
+      margin: 0;
+	  }
+	  table {
+		  height: 100%;
+		  padding: 30px 10px 10px 10px;
+	  }
+	  .header {display: none}
+	  tr.even { font-weight: normal; font-family: "Courier", "Menlo", monospace; font-size: 140%;}
+      .middlecolumn, .absolute { font-size: 130%}
+      tr.odd { font-family: "Helvetica Neue", sans-serif; font-size: 75%; vertical-align: top}
+	  tr:nth-child(16) {font-size: 180%; }
+      .compass { font-weight: bold; font-size: 14pt; font-style: normal; font-variant: small-caps; font-family: "Optima"}
+	  tr:nth-child(17) .compass { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);}
+	  tr:nth-child(17) .compass-right { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg);}
+   </style>
+</head>
+<body>
+<table>
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="compass">previous</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">gg</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">firstline</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">#</td>
+<td align="center">n</td>
+<td align="center" class="middlecolumn">?<em>text</em></td>
+<td align="center">N</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">find word under cursor</td>
+<td align="center">previous <em>text</em></td>
+<td align="center">find <em>text</em></td>
+<td align="center">next <em>text</em></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">C-b</td>
+<td align="center">C-u</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">page</td>
+<td align="center">½ page</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">H</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">screen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">{</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">paragraph</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">(</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">sentence</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">;</td>
+<td align="center"></td>
+<td align="center">B</td>
+<td align="center">gE</td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">k</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">,</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">previous <em>x</em></td>
+<td align="center"></td>
+<td align="center">delimited word</td>
+<td align="center">delimted end</td>
+<td align="center"></td>
+<td align="center">up</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">previous <em>x</em></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">0</td>
+<td align="center">^</td>
+<td align="center">F<em>x</em></td>
+<td align="center">T<em>x</em></td>
+<td align="center">b</td>
+<td align="center">ge</td>
+<td align="center">h</td>
+<td align="center"></td>
+<td align="center">l</td>
+<td align="center">e</td>
+<td align="center">w</td>
+<td align="center">t<em>x</em></td>
+<td align="center">f<em>x</em></td>
+<td align="center">$</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center" class="compass">back</td>
+<td align="center">line</td>
+<td align="center">non-blank</td>
+<td align="center">find <em>x</em></td>
+<td align="center">after <em>x</em></td>
+<td align="center">word</td>
+<td align="center">end</td>
+<td align="center">left</td>
+<td align="center"></td>
+<td align="center">right</td>
+<td align="center">end</td>
+<td align="center">word</td>
+<td align="center">before <em>x</em></td>
+<td align="center">find <em>x</em></td>
+<td align="center">line</td>
+<td align="center" class="compass compass-right">forward</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">,</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">j</td>
+<td align="center"></td>
+<td align="center">E</td>
+<td align="center">W</td>
+<td align="center"></td>
+<td align="center">;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">next <em>x</em></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">down</td>
+<td align="center"></td>
+<td align="center">delimited end</td>
+<td align="center">delimited word</td>
+<td align="center"></td>
+<td align="center">next <em>x</em></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">)</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">sentence</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">}</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">paragraph</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">L</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">screen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center" class="compass" colspan="4">absolute movements</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">C-d</td>
+<td align="center" class="middlecolumn">C-f</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">½ page</td>
+<td align="center">page</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center" class="absolute">''</td>
+<td align="center" class="absolute">'.</td>
+<td align="center" class="absolute">#G</td>
+<td align="center" class="absolute">%</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">N</td>
+<td align="center" class="middlecolumn">/<em>text</em></td>
+<td align="center">n</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">last location</td>
+<td align="center">last edit</td>
+<td align="center">line #</td>
+<td align="center">matching bracket</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">previous <em>text</em></td>
+<td align="center">find <em>text</em></td>
+<td align="center">next <em>text</em></td>
+<td align="center">find word under cursor</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="middlecolumn">G</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">last line</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center" class="compass">next</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
