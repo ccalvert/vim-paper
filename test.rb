@@ -7,7 +7,7 @@ width = 1440
 font_color = 'white'
 font_size = 11
 text_shadow_color = 'black'
-background_color = '#0a5bbf'
+background_color = '#0b4894'
 
 css = <<EOD
     html {
@@ -37,8 +37,8 @@ EOD
 
 IMGKit.configure do |config|
   config.default_options = {
-    :height => 900,
-    :width => 1440
+    :height => height,
+    :width => width
   }
 end
 
